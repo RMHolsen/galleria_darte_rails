@@ -1,14 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PracticeJunkEpsilon</title>
+    <title>Louvre Roulette</title>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    
+    <style>
+    p {
+  font-family: Verdana, sans-serif;
+  font-size: 12pt;
+}
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2, h3, h4 {
+  font-family: Verdana, sans-serif;
+}
+
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+    margin: 0px 10px 0px 10px;
+    float: left;
+    width: 25%;
+}
+
+.main {
+    margin: 0px 10px 0px 10px;
+    width: 50%;
+    float: left;
+}
+
+.fake-link {
+    color: blue;
+}
+
+.title {
+  text-align: center;
+}
+
+.tiny-text {
+  font-size: 10pt;
+}
+
+.error {
+  color: red;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+}
+</style>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="header">
+  <h1 class="title">La Galleria dArte</h1>
+  </div>
+
+  <div class="menu">
+  <p class="fake-link">Log In</p>
+  <p class="fake-link">Sign Up</p>
+  <br>
+  <p class="fake-link">Public Galleries</p>
+  <p class="fake-link">User Index</p>
+  </div>
+
+  <div class="main">
+  <%= yield %>
+  </div>
   </body>
 </html>

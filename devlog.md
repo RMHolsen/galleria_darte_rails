@@ -5,7 +5,13 @@ Created models, migrations, added routes, migrated things.
 Created first draft of a User method to find out how many hours the user has worked in a certain medium
 
 ## 29 September 2021
+**2 project hours**
 Created git repository and uploaded to GitHub 
 Filled out User controller and added validations to model
 Added Sessions controller for login/logout
 Added helper module with methods logged_in? and current_user and display_name? commented out for future functionality
+Added some basic styling to layouts/application and an index page, added Static controller and views 
+Added routes for static, login, sign up
+
+## To-do 
+( Put back in <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> once the rest of it is working to see if the stylesheet path works that way. You're looking for assets/stylesheets/application.css )
