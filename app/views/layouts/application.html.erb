@@ -67,8 +67,12 @@ h2, h3, h4 {
   </div>
 
   <div class="menu">
-  <p class="fake-link">Log In</p>
-  <p class="fake-link">Sign Up</p>
+  <% if logged_in? %>
+  <p><%= link_to "Log Out", logout_path %></p>
+  <% else %> 
+  <p><%= link_to "Log In", login_path %></p>
+  <% end %>
+  <p><%= link_to "Sign Up", signup_path %></p>
   <br>
   <p class="fake-link">Public Galleries</p>
   <p class="fake-link">User Index</p>

@@ -1,0 +1,10 @@
+<h2><%= @user.username %></h2>
+
+<p>This user has <%= pluralize(@user.galleries.count, "gallery") %>.</p>
+
+<p> <%= @user.profile %></p>
+
+<br>
+<% if logged_in? && current_user == @user %>
+<p><%= button_to "Edit My Profile", edit_user_path, method: :get %></p>
+<% end %>

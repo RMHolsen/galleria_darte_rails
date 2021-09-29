@@ -12,6 +12,9 @@ Added Sessions controller for login/logout
 Added helper module with methods logged_in? and current_user and display_name? commented out for future functionality
 Added some basic styling to layouts/application and an index page, added Static controller and views 
 Added routes for static, login, sign up
+Added sign up view, User show view with basic functionality, no gallery display yet, added User profile edit function
+Minor bug hunt, verified sign up, login, logout functionality.
+
 
 ## To-do 
 ( Put back in <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> once the rest of it is working to see if the stylesheet path works that way. You're looking for assets/stylesheets/application.css )

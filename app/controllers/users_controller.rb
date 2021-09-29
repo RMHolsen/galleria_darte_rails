@@ -21,6 +21,7 @@ class UsersController < ApplicationController
             redirect_to @user 
         else 
             render :new 
+        end 
     end 
 
     def show 
