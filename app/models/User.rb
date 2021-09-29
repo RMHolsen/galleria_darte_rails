@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
     has_many :galleries 
     has_many :artworks, through: :galleries
 
+    validates :username, presence: true, uniqueness: true 
+
     def medium_hours(medium)
         @medium_hours = 0
         self.artworks.each do |work|

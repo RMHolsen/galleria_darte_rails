@@ -6,3 +6,6 @@ Created first draft of a User method to find out how many hours the user has wor
 
 ## 29 September 2021
 Created git repository and uploaded to GitHub 
+Filled out User controller and added validations to model
+Added Sessions controller for login/logout
+Added helper module with methods logged_in? and current_user and display_name? commented out for future functionality
