@@ -2,6 +2,8 @@
 
 <p>This user has <%= pluralize(@user.galleries.count, "gallery") %>.</p>
 
+<p>This user has worked <%= @user.medium_hours("watercolor") %> hours in watercolor.</p>
+
 <p> <%= @user.profile %></p>
 
 <br>

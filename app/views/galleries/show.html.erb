@@ -3,10 +3,11 @@
 
 <ul>
 <% @gallery.artworks.each do |art| %>
-    <li><%= link_to "View Picture", gallery_artwork_path(art) %></li>
+    <li><%= link_to "View Picture", gallery_artwork_path(@gallery, art) %></li>
 <% end %>
 </ul>
 
 <% if logged_in? && @gallery.user_id == current_user.id %>
-<p><%= button_to "Edit This Gallery", edit_gallery_path, method: :get %></p>
+<p><%= button_to "Add A Work To This Gallery", new_gallery_artwork_path(@gallery), method: :get %></p>
+<p><%= button_to "Edit This Gallery", edit_gallery_path(@gallery), method: :get %></p>
 <% end %>

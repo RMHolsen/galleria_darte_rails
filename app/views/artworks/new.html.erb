@@ -1,0 +1,31 @@
+<%= form_for([@gallery, @artwork]) do |f| %>
+    <p><%= f.label :medium %>  
+    <select id="artwork_medium" name="artwork[medium]">
+    <option value="watercolor">Watercolor</option>
+    <option value="acrylic">Acrylic</option>
+    <option value="oil pastel">Pastels, Oil</option>
+    <option value"oils">Oils</option>
+    <option value="alcohol marker">Alcohol Marker</option>
+    <option value="colored pencil">Colored Pencil</option>
+    </select></p>
+    
+    <p><%= f.label :style %>
+    <select id="artwork_style" name="artwork[style]">
+    <option value="abstract">Abstract</option>
+    <option value="realism">Realism</option>
+    <option value="landscape">Landscape</option>
+    <option value="cubism">Cubism</option>
+    <option value="marginalia">Marginalia</option>
+    <option value="post-modernism">Post-Modernism</option>
+    <option value="manga">Manga</option>
+    <option value="western comic">Western Comic Book</option>
+    </select></p>
+    
+    <p><%= f.label :subject %>
+    <%= f.text_field :subject %></p>
+
+    <p><%= f.label "Hours Worked:" %>
+    <%= f.number_field :hours %></p>
+
+    <%= f.submit %>
+<% end %>

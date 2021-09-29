@@ -6,15 +6,16 @@ class User < ActiveRecord::Base
     validates :username, presence: true, uniqueness: true 
 
     def medium_hours(medium)
-        @medium_hours = 0
+        @media_hours = 0
+        # Set initial value of 0
         self.artworks.each do |work|
-            if work.medium == medium 
-                @medium_hours += work.hours 
+            if work.hours != nil && work.medium == medium 
+            # If there are work hours (i.e. not nil) and the work medium matches the given
+                @media_hours += work.hours 
+                # Add the work hours to media hours
             end 
         end 
-        
-        # or something to that effect, test once you have views and things up.
-
-        @medium_hours 
+        @media_hours
+        # Return the final value
     end
 end 
