@@ -1,0 +1,12 @@
+<h2><%= @gallery.name %></h2>
+<p><%= @gallery.description %></p>
+
+<ul>
+<% @gallery.artworks.each do |art| %>
+    <li><%= link_to "View Picture", gallery_artwork_path(art) %></li>
+<% end %>
+</ul>
+
+<% if logged_in? && @gallery.user_id == current_user.id %>
+<p><%= button_to "Edit This Gallery", edit_gallery_path, method: :get %></p>
+<% end %>

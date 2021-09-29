@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update]
 
-    # def index 
-    #     # Probably not actually necessary unless we want to display an index of user galleries
-    #     # Also would be a good place to work on the public/private display toggle. 
-    #     # Taking this out for now
-    # end 
+    def index 
+        # Probably not actually necessary unless we want to display an index of user galleries
+        # Also would be a good place to work on the public/private display toggle. 
+        # Okay fine putting it in
+        @users = User.all 
+    end 
 
     def new 
         @user = User.new 
